@@ -32,3 +32,4 @@
 *.DS_Store
 *.app
 *.vscode
+.*o
