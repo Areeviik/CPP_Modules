@@ -1,6 +1,6 @@
 NAME = phonebook
 
-SRCS = phonebook.cpp contacts.cpp
+SRCS = Phonebook.cpp Contact.cpp main.cpp
 
 OBJS = ${SRCS:.cpp = .o}
 
@@ -9,7 +9,7 @@ FLAGS = -Wall -Wextra -Werror
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-		clang++ ${FLAGS} ${SRCS} -o ${NAME}
+		c++ ${FLAGS} ${SRCS} -o ${NAME}
 clean:
 		rm -rf ${OBJS}
 
