@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:03:40 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/07 18:57:49 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:04:07 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,18 +75,16 @@ void Phonebook::search()
 	std::cout<<"---------------------------------------------\n";
 	std::cout<<"Enter index:";
 	std::cin>>inp;
-	if (inp < 0 || inp > this->count)
+	while (inp < 0 || inp > this->count)
 	{
-		std::cout<<"Pls enter a valid index"<<std::endl;
+		std::cout<<"Pls enter a valid index:";
 		std::cin>>inp;
 	}
-	else
-	{
-		std::cout<<"First name: "<<cntcs[inp].get_name()<<std::endl;
-		std::cout<<"Last name: "<<cntcs[inp].get_last_name()<<std::endl;
-		std::cout<<"Nickname: "<<cntcs[inp].get_nickname()<<std::endl;
-		std::cout<<"Number: "<<cntcs[inp].get_number()<<std::endl;
-		std::cout<<"Darkest secret: "<<cntcs[inp].get_secret()<<std::endl;
-	}
-		
+	std::cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+	std::cout<<"First name: "<<cntcs[inp].get_name()<<std::setfill(' ') <<std::setw(10)<<std::endl;
+	std::cout<<"Last name: "<<cntcs[inp].get_last_name()<<std::setfill(' ') <<std::setw(10)<<std::endl;
+	std::cout<<"Nickname: "<<cntcs[inp].get_nickname()<<std::setfill(' ') <<std::setw(10)<<std::endl;
+	std::cout<<"Number: "<<cntcs[inp].get_number()<<std::setfill(' ') <<std::setw(10)<<std::endl;
+	std::cout<<"Darkest secret: "<<cntcs[inp].get_secret()<<std::setfill(' ') <<std::setw(10)<<std::endl;
+	std::cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
 }
