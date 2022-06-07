@@ -6,11 +6,21 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:03:40 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/07 18:18:37 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:57:49 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp" 
+
+void print_info(std::string str)
+{
+	if (str.length() > 10)
+	{
+		str.resize(9);
+		str=str + '.';
+	}
+	std::cout<<std::setfill(' ') <<std::setw(10)<<str;
+}
 
 void Phonebook::add(int i)
 {
@@ -39,6 +49,7 @@ void Phonebook::search()
 {
 	int i = 0;
 	int inp;
+	std::cout<<"---------------------------------------------\n";
 	std::cout<<"|";
 	std::cout<<std::setfill(' ') <<std::setw(10)<<"Index";
 	std::cout<<"|";
@@ -53,12 +64,29 @@ void Phonebook::search()
 		std::cout<<"|";
 		std::cout<<std::setfill(' ') <<std::setw(10)<<i;
 		std::cout<<"|";
-		std::cout<<std::setfill(' ') <<std::setw(10)<<cntcs[i].get_name();
+		print_info(cntcs[i].get_name());
 		std::cout<<"|";
-		std::cout<<std::setfill(' ') <<std::setw(10)<<cntcs[i].get_last_name();
+		print_info(cntcs[i].get_last_name());
 		std::cout<<"|";
-		std::cout<<std::setfill(' ') <<std::setw(10)<<cntcs[i].get_nickname();
-		std::cout<<"|";
+		print_info(cntcs[i].get_nickname());
+		std::cout<<"|"<<std::endl;
 		i++;
 	}
+	std::cout<<"---------------------------------------------\n";
+	std::cout<<"Enter index:";
+	std::cin>>inp;
+	if (inp < 0 || inp > this->count)
+	{
+		std::cout<<"Pls enter a valid index"<<std::endl;
+		std::cin>>inp;
+	}
+	else
+	{
+		std::cout<<"First name: "<<cntcs[inp].get_name()<<std::endl;
+		std::cout<<"Last name: "<<cntcs[inp].get_last_name()<<std::endl;
+		std::cout<<"Nickname: "<<cntcs[inp].get_nickname()<<std::endl;
+		std::cout<<"Number: "<<cntcs[inp].get_number()<<std::endl;
+		std::cout<<"Darkest secret: "<<cntcs[inp].get_secret()<<std::endl;
+	}
+		
 }

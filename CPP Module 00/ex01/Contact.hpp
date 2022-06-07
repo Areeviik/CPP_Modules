@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:05:31 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/07 18:09:22 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:44:22 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string.h>
 
 class Contact
 {
