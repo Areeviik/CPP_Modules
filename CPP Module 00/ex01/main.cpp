@@ -19,9 +19,11 @@ int main()
 			if (i == 8)
 				i = 0;
 		}
-		// else if(cmd == "Search")
-		// {
-		// 	obj.search();
-		// }
+		else if(cmd == "SEARCH")
+		{
+			obj.search();
+		}
+		else
+			std::cout<<"Enter one of three commands pls: ADD, SEARCH, EXIT\n";
 	}
 }

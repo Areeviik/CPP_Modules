@@ -5,9 +5,9 @@ void Contact::set_name(std::string name)
 	this->name = name;
 }
 
-void Contact::set_surname(std::string surname)
+void Contact::set_last_name(std::string last_name)
 {
-	this->surname = surname;
+	this->last_name = last_name;
 }
 
 void Contact::set_nickname(std::string nickname)
@@ -30,9 +30,9 @@ std::string Contact::get_name() const
 	return name;
 }
 
-std::string Contact::get_surname() const
+std::string Contact::get_last_name() const
 {
-	return surname;
+	return last_name;
 }
 
 std::string Contact::get_nickname() const

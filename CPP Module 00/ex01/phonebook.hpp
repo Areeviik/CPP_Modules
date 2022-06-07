@@ -7,6 +7,7 @@ class Phonebook
 {
 	public:
 		Contact cntcs[8];
+		int 	count;
 		void	add(int i);
 		void	search();
 };
