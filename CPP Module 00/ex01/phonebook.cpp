@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/07 18:03:40 by akhachat          #+#    #+#             */
+/*   Updated: 2022/06/07 18:18:37 by akhachat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Phonebook.hpp" 
 
 void Phonebook::add(int i)
@@ -26,19 +38,27 @@ void Phonebook::add(int i)
 void Phonebook::search()
 {
 	int i = 0;
-	// int inp;
-	std::cout<<"     Index|First name| Last name|  Nickname"<<std::endl;
+	int inp;
+	std::cout<<"|";
+	std::cout<<std::setfill(' ') <<std::setw(10)<<"Index";
+	std::cout<<"|";
+	std::cout<<std::setfill(' ') <<std::setw(10)<<"First name";
+	std::cout<<"|";
+	std::cout<<std::setfill(' ') <<std::setw(10)<<"Last name";
+	std::cout<<"|";
+	std::cout<<std::setfill(' ') <<std::setw(10)<<"Nickname";
+	std::cout<<"|"<<std::endl;
 	while (i < this->count)
 	{
-		std::cout<<"|"<<std::endl;
-		std::cout<<i<<std::endl;
-		std::cout<<"|"<<std::endl;
-		std::cout<<cntcs[i].get_name()<<std::endl;
-		std::cout<<"|"<<std::endl;
-		std::cout<<cntcs[i].get_last_name()<<std::endl;
-		std::cout<<"|"<<std::endl;
-		std::cout<<cntcs[i].get_nickname()<<std::endl;
-		std::cout<<"|"<<std::endl;
+		std::cout<<"|";
+		std::cout<<std::setfill(' ') <<std::setw(10)<<i;
+		std::cout<<"|";
+		std::cout<<std::setfill(' ') <<std::setw(10)<<cntcs[i].get_name();
+		std::cout<<"|";
+		std::cout<<std::setfill(' ') <<std::setw(10)<<cntcs[i].get_last_name();
+		std::cout<<"|";
+		std::cout<<std::setfill(' ') <<std::setw(10)<<cntcs[i].get_nickname();
+		std::cout<<"|";
 		i++;
 	}
 }
