@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:04:42 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/07 18:04:43 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/08 13:36:08 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int main()
 	std::string cmd;
 	Phonebook obj;
 
-	while (1)
+	while (22)
 	{
-		std::cout<<"Enter command please :)\n";
+		std::cout<<"\033[1;33mEnter command please :)\033[0m\n";
 		std::cin>>cmd;
 		if (cmd == "EXIT")
 		   return (0);
@@ -36,6 +36,6 @@ int main()
 			obj.search();
 		}
 		else
-			std::cout<<"Enter one of three commands pls: ADD, SEARCH, EXIT\n";
+			std::cout<<"\033[1;31mEnter one of three commands pls: ADD, SEARCH, EXIT\033[0m\n";
 	}
 }
