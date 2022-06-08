@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:04:42 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/08 13:36:08 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/08 13:55:57 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ int main()
 		std::cout<<"\033[1;33mEnter command please :)\033[0m\n";
 		std::cin>>cmd;
 		if (cmd == "EXIT")
-		   return (0);
+		{
+			std::cout<<"\033[1;33mBye(\033[0m\n";
+			return (0);
+		}
 		else if (cmd == "ADD")
 		{
 			obj.add(i);

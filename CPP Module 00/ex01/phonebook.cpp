@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:03:40 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/08 13:48:52 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/08 13:54:27 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,10 +101,10 @@ void Phonebook::search()
 		std::cin.ignore();
 	}
 	std::cout<<"\033[1;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[0m\n";
-	std::cout<<"\033[1;36mFirst name: \033[0m"<<cntcs[inp].get_name()<<std::setfill(' ') <<std::setw(20)<<std::endl;
-	std::cout<<"\033[1;36mLast name: \033[0m"<<cntcs[inp].get_last_name()<<std::setfill(' ') <<std::setw(20)<<std::endl;
-	std::cout<<"\033[1;36mNickname: \033[0m"<<cntcs[inp].get_nickname()<<std::setfill(' ') <<std::setw(20)<<std::endl;
-	std::cout<<"\033[1;36mNumber: \033[0m"<<cntcs[inp].get_number()<<std::setfill(' ') <<std::setw(20)<<std::endl;
-	std::cout<<"\033[1;36mDarkest secret: \033[0m"<<cntcs[inp].get_secret()<<std::setfill(' ') <<std::setw(20)<<std::endl;
+	std::cout<<"\033[1;36mFirst name: \033[0m"<<cntcs[inp].get_name()<<std::endl;
+	std::cout<<"\033[1;36mLast name: \033[0m"<<cntcs[inp].get_last_name()<<std::endl;
+	std::cout<<"\033[1;36mNickname: \033[0m"<<cntcs[inp].get_nickname()<<std::endl;
+	std::cout<<"\033[1;36mNumber: \033[0m"<<cntcs[inp].get_number()<<std::endl;
+	std::cout<<"\033[1;36mDarkest secret: \033[0m"<<cntcs[inp].get_secret()<<std::endl;
 	std::cout<<"\033[1;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[0m\n";
 }
