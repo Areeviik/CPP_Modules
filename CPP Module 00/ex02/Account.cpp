@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:36:15 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/08 16:47:09 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/08 16:51:44 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int	Account::_totalNbWithdrawals = 0;
 
 void Account::_displayTimestamp(void)
 {
-    std::cout<<"time:";
     std::time_t t = std::time(0);
+	std::tm *lt = std::localtime(&t);
+	std::cout << "[" << 1900 + lt->tm_year<< "0" << 1 + lt->tm_mon << lt->tm_mday;
+	std::cout << "_" << lt->tm_hour << lt->tm_min << lt->tm_sec << "] ";
 }
 
 int Account::getNbAccounts(void)

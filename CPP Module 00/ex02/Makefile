@@ -1,4 +1,4 @@
-NAME = account
+NAME = Bankster
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
