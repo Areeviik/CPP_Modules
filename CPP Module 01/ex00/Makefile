@@ -1,8 +1,8 @@
-NAME = megaphone
+NAME = Bankster
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = megaphone.cpp
+SRCS = Account.cpp tests.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
