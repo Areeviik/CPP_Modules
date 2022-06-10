@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:36:15 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/08 16:51:44 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/10 14:29:06 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ Account::Account(int initial_deposit)
 }
 
 Account::~Account(void)
-{
+{   
     _displayTimestamp();
     std::cout<<"index:"<<_accountIndex<<";";
     std::cout<<"amount:"<<_amount<<";";

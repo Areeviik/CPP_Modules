@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 17:11:59 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/10 14:58:05 by akhachat         ###   ########.fr       */
+/*   Created: 2022/06/10 14:46:45 by akhachat          #+#    #+#             */
+/*   Updated: 2022/06/10 14:52:31 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+void randomChump( std::string name )
 {
-    
+    Zombie random_chump = Zombie(name);
 }

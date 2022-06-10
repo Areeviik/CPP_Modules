@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 17:11:59 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/10 14:58:05 by akhachat         ###   ########.fr       */
+/*   Created: 2022/06/10 14:45:39 by akhachat          #+#    #+#             */
+/*   Updated: 2022/06/10 14:51:19 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie* newZombie( std::string name )
 {
-    
+    Zombie *new_zombie = new Zombie(name);
+    return (new_zombie);
 }
