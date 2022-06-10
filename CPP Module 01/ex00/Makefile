@@ -1,8 +1,8 @@
-NAME = Bankster
+NAME = Zombie
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = Account.cpp tests.cpp
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
