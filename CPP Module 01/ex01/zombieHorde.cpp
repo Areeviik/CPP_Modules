@@ -21,8 +21,9 @@ Zombie* zombieHorde( int N, std::string name )
     Zombie *newZombie = new Zombie[N];
     while (i < N)
     {
-        newZombie[i].announce();
+        newZombie[i].announce(name);
         i++;
     }
+    delete[] newZombie;
     return (newZombie);
 }

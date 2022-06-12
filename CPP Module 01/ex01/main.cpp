@@ -20,7 +20,9 @@ int main()
     std::cin>>num;
     std::cout<<"What will be zombies name?"<<std::endl;
     std::cin>>name;
+    Zombie obj;
+    obj.set_name(name);
     Zombie *Horde = zombieHorde(num, name);
-    delete [] Horde;
+    // delete [] Horde;
     return (0);
 }

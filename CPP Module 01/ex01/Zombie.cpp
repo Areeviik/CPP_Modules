@@ -12,10 +12,14 @@
 
 #include "Zombie.hpp"
 
+Zombie::Zombie()
+{
+
+}
+
 void Zombie::set_name(std::string n)
 {
     this->name = n;
-    announce();
 }
 
 std::string Zombie::get_name() const
@@ -23,12 +27,12 @@ std::string Zombie::get_name() const
     return name;
 }
 
-void Zombie::announce(void)
+void Zombie::announce(std::string name)
 {
-    std::cout<<this->name<<"\033[1;33m: BraiiiiiiinnnzzzZ...\033[0m"<<std::endl;
+    std::cout<<name<<"\033[1;33m: BraiiiiiiinnnzzzZ...\033[0m"<<std::endl;
 }
 
 Zombie::~Zombie()
 {
-    std::cout<<this->name<<"\033[1;31m: Unfortunately died(((\033[0m"<<std::endl;
+    std::cout<<name<<"\033[1;31m: Unfortunately died(((\033[0m"<<std::endl;
 }
