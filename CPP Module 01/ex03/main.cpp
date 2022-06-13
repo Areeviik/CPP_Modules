@@ -6,11 +6,13 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 15:21:27 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/13 15:21:28 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/13 17:59:14 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {

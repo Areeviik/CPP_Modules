@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 15:21:21 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/13 15:21:22 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/13 17:58:38 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class HumanA
 {
     private:
         std::string name;
-        Weapon weapon;
+        Weapon *weapon;
     public:
-        HumanA();
+        HumanA(std::string name, Weapon &_weapon);
         ~HumanA();
         void    attack();
 };
