@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:46:27 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/13 14:59:17 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/13 15:44:44 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Zombie* zombieHorde( int N, std::string name )
     Zombie *newZombie = new Zombie[N];
     while (i < N)
     {
+        newZombie[i].set_name(name);
         newZombie[i].announce(name);
         i++;
     }

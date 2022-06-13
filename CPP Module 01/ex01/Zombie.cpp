@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:12:12 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/13 15:18:23 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/13 15:47:50 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void Zombie::set_name(std::string n)
 
 std::string Zombie::get_name() const
 {
-    return name;
+    return this->name;
 }
 
 void Zombie::announce(std::string name)
@@ -34,5 +34,5 @@ void Zombie::announce(std::string name)
 
 Zombie::~Zombie()
 {
-    std::cout<<name<<"\033[1;31m: Unfortunately died(((\033[0m"<<std::endl;
+    std::cout<<this->name<<"\033[1;31m: Unfortunately died(((\033[0m"<<std::endl;
 }
