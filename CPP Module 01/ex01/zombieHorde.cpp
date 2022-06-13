@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:46:27 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/12 19:28:46 by marvin           ###   ########.fr       */
+/*   Updated: 2022/06/13 14:59:17 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ Zombie* zombieHorde( int N, std::string name )
         newZombie[i].announce(name);
         i++;
     }
-    delete[] newZombie;
     return (newZombie);
 }
