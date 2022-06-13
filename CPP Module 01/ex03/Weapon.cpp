@@ -6,7 +6,7 @@
 /*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 15:21:30 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/13 17:46:50 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/13 20:05:56 by akhachat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 Weapon::Weapon(std::string _type)
 {
     this->type = _type;
+}
+
+Weapon::~Weapon()
+{
+    
 }
 
 std::string& Weapon::getType()

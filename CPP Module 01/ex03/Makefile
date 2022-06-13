@@ -1,8 +1,8 @@
-NAME = Moar_brainz
+NAME = violence
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = main.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
