@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 15:21:30 by akhachat          #+#    #+#             */
-/*   Updated: 2022/06/13 20:05:56 by akhachat         ###   ########.fr       */
+/*   Updated: 2022/06/14 09:35:07 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Weapon::Weapon(std::string _type)
 {
-    this->type = _type;
+    type = _type;
 }
 
 Weapon::~Weapon()
@@ -22,12 +22,12 @@ Weapon::~Weapon()
     
 }
 
-std::string& Weapon::getType()
+const std::string& Weapon::getType()
 {
-    return (this->type);
+    return (type);
 }
 
 void Weapon::setType(std::string _type)
 {
-    this->type = _type;
+    type = _type;
 }
