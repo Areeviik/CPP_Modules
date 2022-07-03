@@ -11,6 +11,19 @@ Fixed::~Fixed()
     std::cout<<"Destructor called"<<std::endl;
 }
 
+Fixed::Fixed(const int number)
+{
+    std::cout<<"Int constructor called"<<std::endl;
+
+}
+
+Fixed::Fixed(const float number)
+{
+    std::cout<<"Float constructor called"<<std::endl;
+
+}
+
+
 int Fixed::getRawBits(void) const
 {
     std::cout<<"getRawBits member function called"<<std::endl;

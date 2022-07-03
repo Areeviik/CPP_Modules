@@ -1,8 +1,8 @@
-NAME = karenFilter
+NAME = orthodox_canonical
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = main.cpp Karen.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
