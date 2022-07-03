@@ -1,8 +1,8 @@
-NAME = megaphone
+NAME = karenFilter
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = megaphone.cpp
+SRCS = main.cpp Karen.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

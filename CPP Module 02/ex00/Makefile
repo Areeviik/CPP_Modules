@@ -1,8 +1,8 @@
-NAME = Brain
+NAME = orthodox_canonical
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = main.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
