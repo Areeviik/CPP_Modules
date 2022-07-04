@@ -6,6 +6,19 @@ Fixed::Fixed()
     this->fixed_point_num = 0;
 }
 
+Fixed::Fixed(const Fixed &other)
+{
+    std::cout<< "Copy constructor called" <<std::endl;
+    this->fixed_point_num = other.getRawBits();
+}
+
+Fixed &Fixed::operator=(Fixed const &obj)
+{
+    std::cout<<"Copy assignment operator called"<<std::endl;
+    this->fixed_point_num=obj.getRawBits();
+    return *this;
+}
+
 Fixed::~Fixed()
 {
     std::cout<<"Destructor called"<<std::endl;
