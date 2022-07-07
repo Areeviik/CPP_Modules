@@ -14,26 +14,22 @@
 
 Fixed::Fixed()
 {
-    std::cout<<"Default constructor called"<<std::endl;
     this->fixed_point_num = 0;
 }
 
 Fixed::Fixed(const Fixed &other)
 {
-    std::cout<< "Copy constructor called" <<std::endl;
     this->fixed_point_num = other.getRawBits();
 }
 
 Fixed::Fixed(const int val)
 {
-    std::cout<<"Constructor for int called"<<std::endl;
-    this->fixed_point_num = (val<<fractional_bits);
+    fixed_point_num = (val<<fractional_bits);
 }
 
 Fixed::Fixed(const float val)
 {
-    std::cout<<"Constructor for float called"<<std::endl;
-    this->fixed_point_num= roundf((val*(1<<fractional_bits)));
+   fixed_point_num= roundf(val*(1<<fractional_bits));
 }
 
 bool Fixed::operator>(Fixed const &val)
@@ -106,30 +102,32 @@ Fixed Fixed::operator/(const Fixed &val)
     return (div); 
 }
 
-Fixed &Fixed::operator++(int val)
+Fixed Fixed::operator++(int)
 {
-    Fixed &temp(*this);
-    this->fixed_point_num++;
+    Fixed temp(*this);
+    temp.fixed_point_num=fixed_point_num++;
     return temp;
 }
 
 Fixed Fixed::operator++(void)
 {
-    ++this->fixed_point_num;
-    return *this;
+    Fixed temp(*this);
+    temp.fixed_point_num=++fixed_point_num;
+    return temp;
 }
 
-Fixed &Fixed::operator--(int val)
+Fixed Fixed::operator--(int)
 {
-    Fixed &temp(*this);
-    this->fixed_point_num--;
+    Fixed temp(*this);
+    temp.fixed_point_num=fixed_point_num--;
     return temp;
 }
 
 Fixed Fixed::operator--(void)
 {
-    --this->fixed_point_num;
-    return *this;
+    Fixed tmp(*this);
+    tmp.fixed_point_num= --fixed_point_num;
+    return tmp;
 }
 
 Fixed::~Fixed()
@@ -139,17 +137,16 @@ Fixed::~Fixed()
 
 int Fixed::toInt( void ) const
 {
-    return this->fixed_point_num <<this->fractional_bits;
+    return fixed_point_num >> fractional_bits;
 }
 
 float Fixed::toFloat( void ) const
 {
-    return (float)this->fixed_point_num/(float)(1<<this->fixed_point_num);
+    return (float)fixed_point_num/(float)(1<<fixed_point_num);
 }
 
 int Fixed::getRawBits(void) const
 {
-    std::cout<<"getRawBits member function called"<<std::endl;
     return (fixed_point_num);
 }
 
@@ -188,7 +185,6 @@ Fixed & Fixed::min(Fixed &a, Fixed &b)
 
 Fixed &Fixed::operator=(Fixed const &obj)
 {
-    std::cout<<"Copy assignment operator called"<<std::endl;
     this->fixed_point_num=obj.getRawBits();
     return *this;
 }

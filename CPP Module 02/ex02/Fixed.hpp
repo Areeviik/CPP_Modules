@@ -37,10 +37,10 @@ class Fixed
         Fixed operator-(const Fixed &val);
         Fixed operator*(const Fixed &val);
         Fixed operator/(const Fixed &val);
-        Fixed & operator++(int val);
+        Fixed operator++(int);
         Fixed operator++(void);
         Fixed operator--(void);
-        Fixed & operator--(int val);
+        Fixed operator--(int);
         ~Fixed();
         int getRawBits( void ) const;
         void setRawBits( int const raw );
