@@ -1,4 +1,4 @@
-NAME = orthodox_canonical
+NAME = ClapTrap
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 

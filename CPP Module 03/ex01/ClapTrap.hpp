@@ -30,10 +30,11 @@ class ClapTrap
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-        std::string getName();
-        int getHP();
-        int getEnergy();
-        int getAttack();
+        ClapTrap& operator= (const ClapTrap& obj);
+        std::string getName() const;
+        int getHP() const;
+        int getEnergy() const;
+        int getAttack() const ;
         void setHP(int hp);
         void setEnergy(int energy);
         void setAttack(int att);
