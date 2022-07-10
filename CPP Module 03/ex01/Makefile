@@ -2,7 +2,7 @@ NAME = ClapTrap
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
