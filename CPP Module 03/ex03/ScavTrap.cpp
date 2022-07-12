@@ -21,6 +21,16 @@ ScavTrap::ScavTrap(ScavTrap &other)
     this->_attack_damage = other.getAttack();
 }
 
+ScavTrap &ScavTrap::operator=(ScavTrap const &obj)
+{
+    std::cout<<"ScavTrap copy assignment operator called"<<std::endl;
+    this->_name = obj._name;
+    this->_hit_points = obj._hit_points;
+    this->_energy_points = obj._energy_points;
+    this->_attack_damage = obj._attack_damage;
+    return *this;
+}
+
 ScavTrap::~ScavTrap()
 {
     std::cout << "ScavTrap destructor called" << std::endl;
