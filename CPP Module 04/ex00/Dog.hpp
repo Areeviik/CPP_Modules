@@ -5,7 +5,13 @@
 
 class Dog:public Animal
 {
-    
+    public:
+        Dog();
+        Dog(std::string name);
+        Dog(Dog &oth);
+        ~Dog();
+        Dog &operator=(Dog const &value);
+        void makeSound();
 };
 
 #endif

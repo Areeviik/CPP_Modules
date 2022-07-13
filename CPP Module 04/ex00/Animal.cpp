@@ -18,7 +18,7 @@ Animal::Animal(Animal &obj)
     this->type = obj.type;
 }
 
-Animal &Animal::operator=(Animal &value)
+Animal &Animal::operator=(Animal const &value)
 {
     std::cout<<"Assignment operator of Animal class is called"<<std::endl;
     this->type = value.type;
