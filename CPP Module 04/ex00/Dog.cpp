@@ -14,8 +14,11 @@ Dog::Dog(Dog &obj)
 
 Dog &Dog::operator=(Dog const &value)
 {
-    std::cout<<"Assignment operator of Dog class is called"<<std::endl;
-    *this = value;
+    if (this != &value)
+    {
+        std::cout<<"Assignment operator of Dog class is called"<<std::endl;
+        *this = value;
+    }
     return *this;
 }
 

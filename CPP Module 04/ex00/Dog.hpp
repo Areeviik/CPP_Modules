@@ -11,7 +11,7 @@ class Dog:public Animal
         Dog(Dog &oth);
         ~Dog();
         Dog &operator=(Dog const &value);
-        void makeSound();
+        virtual void makeSound();
 };
 
 #endif
