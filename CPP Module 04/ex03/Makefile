@@ -1,8 +1,8 @@
-NAME = ClapTrap
+NAME = interface
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.
 
 OBJS = ${SRCS:.cpp=.o}
 

@@ -1,4 +1,4 @@
-NAME = Animal
+NAME = Animal_Polymorphism
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
