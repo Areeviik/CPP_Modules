@@ -5,8 +5,9 @@
 
 int main()
 {
-    AAnimal *animal;
-    animal->makeSound();
+
+    //AAnimal animal; error
+    // animal->makeSound();
     std::cout<<"Can't instantiate Animal class, cos it's an abstract class"<<std::endl;
     return 0;
 }
