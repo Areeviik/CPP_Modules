@@ -2,7 +2,7 @@ NAME = interface
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = main.
+SRCS = $(wildcard *.cpp)
 
 OBJS = ${SRCS:.cpp=.o}
 

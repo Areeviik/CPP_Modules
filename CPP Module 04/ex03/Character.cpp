@@ -57,7 +57,7 @@ Character::~Character()
     }
 };
 
-std::string Character::getName(void)const
+const std::string& Character::getName(void)const
 {
     return this->name;
 }
@@ -65,6 +65,7 @@ std::string Character::getName(void)const
 void Character::equip(AMateria *m)
 {
     int i = 0;
+        // std::cout << "\nstexxxx eemmmmm\n";
     while (i < this->size)
     {
         if (this->inventory[i] == NULL)

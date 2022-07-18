@@ -2,7 +2,7 @@
 
 Cat::Cat()
 {
-    Animal::type = "Cat";
+    AAnimal::type = "Cat";
     std::cout<<"Default constructor of Cat class is called"<<std::endl;
 }
 

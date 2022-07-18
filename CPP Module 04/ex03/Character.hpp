@@ -3,7 +3,7 @@
 
 #include "ICharacter.hpp"
 
-class Character
+class Character:public ICharacter
 {
     private:
         static const int size = 4;
@@ -13,9 +13,9 @@ class Character
         Character();
         Character(const std::string name);
         Character(const Character &oth);
-        ~Character();
+        virtual ~Character();
         Character &operator=(const Character &val);
-        std::string getName() const;
+        const std::string& getName() const;
         void equip(AMateria *m);
         void unequip(int i);
         void use(int i, ICharacter& target);

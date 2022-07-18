@@ -14,7 +14,6 @@ class Cat:public Animal
         ~Cat();
         Cat &operator=(Cat const &value);
         virtual void makeSound();
-        Brain *getBrain(void)const;
 };
 
 #endif

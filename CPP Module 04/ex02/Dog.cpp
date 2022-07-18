@@ -2,7 +2,7 @@
 
 Dog::Dog()
 {
-    Animal::type = "Dog";
+    AAnimal::type = "Dog";
     std::cout<<"Default constructor of Dog class is called"<<std::endl;
 }
 

@@ -23,6 +23,7 @@ Brain &Brain::operator=(const Brain &value)
         std::cout<<"Assignment operator of Brain class is called"<<std::endl;
         *this->ideas = *value.ideas;
     }
+    return *this;
 }
 
 std::string Brain::getIdeas(int i)const

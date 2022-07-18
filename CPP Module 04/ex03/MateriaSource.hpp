@@ -6,11 +6,11 @@
 class MateriaSource:public IMateriaSource
 {
     protected:
-        static const int size;
+        static const int size = 4;
         AMateria *m[size];
     public:
         MateriaSource();
-        ~MateriaSource();
+        virtual ~MateriaSource();
         MateriaSource(const MateriaSource &oth);
         MateriaSource &operator=(const MateriaSource &val);
 

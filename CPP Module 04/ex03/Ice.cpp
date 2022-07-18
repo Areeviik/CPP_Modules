@@ -18,7 +18,7 @@ Ice &Ice::operator=(const Ice &val)
 
 Ice *Ice::clone() const
 {
-    return new Ice(*this);
+    return new Ice();
 }
 
 void Ice::use(ICharacter &target)

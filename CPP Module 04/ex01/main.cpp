@@ -17,11 +17,13 @@ int main()
         else
             animals[i] = new Dog();
         animals[i]->makeSound();
+
     }
 
     for (int i = 0; i < num; i++)
     {
-        brain = animals[i]->getBrain();
+        printf("aaaa    aygaigusfghaiufhr aisgiuvsha\n");
+        // brain = animals[i]->getBrain();
         brain->setIdeas("great idea",0);
         brain->setIdeas("bad idea", 1);
         brain->setIdeas("no idea", 2);
@@ -29,7 +31,7 @@ int main()
 
     for (int i = 0; i < num; i++)
     {
-        brain = animals[i]->getBrain();
+        // brain = animals[i]->getBrain();
         std::cout<<brain->getIdeas(0)<<std::endl;
     }
 
