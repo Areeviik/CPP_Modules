@@ -1,4 +1,4 @@
-NAME = cast
+NAME = iter
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
