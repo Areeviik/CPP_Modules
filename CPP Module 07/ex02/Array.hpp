@@ -34,11 +34,12 @@ class Array
         {
             if (i < 0 || i >= this->_n)
                 throw Array::out_of_bounds();
+            return this->array[i];
         };
         unsigned int size()
         {
             return this->_n;
-        }
+        };
         class out_of_bounds: public std::exception
         {
             public:
@@ -46,7 +47,7 @@ class Array
                 {
                     return ("Index out of bounds");
                 }
-        }
+        };
 };
 
 #endif
