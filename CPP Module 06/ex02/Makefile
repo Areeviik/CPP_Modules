@@ -2,7 +2,7 @@ NAME = cast
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
-SRCS = main.cpp 
+SRCS = main.cpp Base.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
