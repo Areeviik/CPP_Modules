@@ -1,11 +1,11 @@
 #include <iostream>
-#include "iter.hpp"
+#include "Iter.hpp"
 #include <string.h>
 
 template<typename T>
 void ft_print(T &el)
 {
-    std::cout "~~~~~~~"<<el<<"~~~~~~~~~"<<std::endl;
+    std::cout<< "~~~~~~~"<<el<<"~~~~~~~~~"<<std::endl;
 }
 
 int main()
