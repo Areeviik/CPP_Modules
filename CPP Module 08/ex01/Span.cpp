@@ -3,11 +3,13 @@
 Span::Span()
 {
     this->N = 0;
+    this->s = 0;
 }
 
 Span::Span(unsigned int n)
 {
     this->N = n;
+    this->s = 0;
 }
 
 Span::Span(const Span &cp)
@@ -18,7 +20,10 @@ Span::Span(const Span &cp)
 Span &Span::operator=(const Span &oth)
 {
     if (this != &oth)
-        this->arr = oth.arr;
+    {
+        this->N = oth.N;
+        this->s = oth.s;
+    }
     return (*this);
 }
 
@@ -26,8 +31,12 @@ Span::~Span(){}
 
 void Span::addNumber(int num)
 {
-    if (this->arr.size() >= this->N || this->arr.size() >= this->arr.max_size())
+    this->s++;
+    if (this->s > this->N)
+    {
+        this->s--;
         throw Span::MaxSize();
+    }
     this->arr.push_back(num);
 }
 
@@ -35,8 +44,14 @@ void Span::addManyNums(std::vector<int>::const_iterator it1, std::vector<int>::c
 {
     while (it1 < it2)
     {
-        this->N++;
-        if (size() > )
+        this->s++;
+        if (this->s > this->N)
+        {
+            this->s--;
+            throw Span::MaxSize();
+        }
+        this->arr.push_back(*it1);
+        it1++;
     }
 }
 

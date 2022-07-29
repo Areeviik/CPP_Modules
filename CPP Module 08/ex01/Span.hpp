@@ -9,6 +9,7 @@ class Span
 {
     private:
         unsigned int N;
+        unsigned int s;
         std::vector<int> arr;
     public:
         Span();
@@ -19,6 +20,8 @@ class Span
         void addNumber(int num);
         int shortestSpan();
         int longestSpan();
+        unsigned int getSize() const;
+        unsigned int getLim() const;
         class MaxSize:public std::exception
         {
             public:
