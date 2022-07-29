@@ -4,7 +4,7 @@
 PresidentialPardonForm::PresidentialPardonForm(void): Form("Presidential Pardon", 25, 5), _target("No target"){}
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
-    :Form("Presidential PArdon", 25, 5), _target(target){}
+    :Form("Presidential Pardon", 25, 5), _target(target){}
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &oth)
     :Form("Presidential Pardon", 25, 5), _target(oth._target + "_copy")

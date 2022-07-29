@@ -33,7 +33,7 @@ static Form	*President(std::string target)
 
 Form *Intern::makeForm(std::string name, std::string target)
 {
-    std::string names[3] = {"Shrubbery Creation", "Robotomy Request", "Presidential pardon"};
+    std::string names[3] = {"Shrubbery Creation", "Robotomy Request", "Presidential Pardon"};
     Form *(*forms[])(std::string target) = {&Shrubbery, &Robotomy, &President};
     Form *f = NULL;
 
@@ -47,7 +47,7 @@ Form *Intern::makeForm(std::string name, std::string target)
         i++;
     }
     if (f)
-        std::cout<<"Intern creates" << target <<std::endl;
+        std::cout<<"Intern creates " << target <<std::endl;
     else if (!f)
         std::cout<<"Form name doesn't exist\n";
     return f;

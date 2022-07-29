@@ -2,13 +2,15 @@
 
 Bureaucrat::Bureaucrat(): name("no name"), grade(150){}
 
+Bureaucrat::~Bureaucrat(){}
+
 Bureaucrat::Bureaucrat(std::string name, int grade)
 {
 	this->name = name;
 	if (grade < 1)
-		Bureaucrat::GradeTooHighException();
+		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
-		Bureaucrat::GradeTooLowException();
+		throw Bureaucrat::GradeTooLowException();
 	else
 		this->grade = grade;
 }
@@ -42,7 +44,7 @@ void Bureaucrat::incGrade()
 {
 	this->grade += 1;
 	if (grade < 1)
-		Bureaucrat::GradeTooHighException();
+		throw Bureaucrat::GradeTooHighException();
 	this->grade -= 1;	
 }
 
@@ -50,7 +52,7 @@ void Bureaucrat::decGrade()
 {
 	this->grade -= 1;
 	if (grade > 150)
-		Bureaucrat::GradeTooLowException();
+		throw Bureaucrat::GradeTooLowException();
 	this->grade += 1;
 }
 
@@ -74,12 +76,12 @@ void Bureaucrat::signForm(Form &Form)
 	}
 	if (Form.getExecGrade() < 1)
 	{
-		Bureaucrat::GradeTooHighException();
+		throw Bureaucrat::GradeTooHighException();
 		std::cout<<this->name<<" couldn't sign "<<Form.getName()<<" because grade is too high"<<std::endl;
 	}	
 	else if (Form.getExecGrade() > 150)
 	{
-		Bureaucrat::GradeTooLowException();
+		throw Bureaucrat::GradeTooLowException();
 		std::cout<<this->name<<" couldn't sign "<<Form.getName()<<" because grade is too low"<<std::endl;
 	}
 }
@@ -90,10 +92,4 @@ void Bureaucrat::executeForm(Form const &form)
 		std::cout<<name<<" executed "<< form.getName() <<std::endl;
 	else
 		throw GradeTooLowException();
-}
-
-std::ostream & operator<<( std::ostream & out, Bureaucrat const & Bureaucrat)
-{
-	out << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade();
-	return (out);
 }

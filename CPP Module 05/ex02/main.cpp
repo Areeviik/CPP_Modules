@@ -1,70 +1,85 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akhachat <akhachat@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/30 02:12:17 by shovsepy          #+#    #+#             */
+/*   Updated: 2022/07/22 19:09:52 by akhachat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include <ctime>
 
 int main()
 {
-    Bureaucrat low_grade_brcrt = Bureaucrat("Johnny", 150);
-	Bureaucrat high_grade_brcrt = Bureaucrat ("Smith", 1);
-	Bureaucrat normal_brcrt = Bureaucrat ("Nicole", 23);
+	Bureaucrat		Odin("Odin", 1);
+	Bureaucrat		Thor("Thor", 40);
+	Bureaucrat		Loki("Loki", 150);
+	Form			*form = NULL;
 
-	Form form1 = Form("form1", 23, 1);
-	Form form2 = Form("form2", 42, 1);
-	Form form3 = Form("form3", 34, 1);
+	srand(time(NULL));
 	try
 	{
-		low_grade_brcrt.decGrade();
+		form = new PresidentialPardonForm("28Z");
+		form->execute(Odin);
+		delete form;
+		form = NULL;
 	}
-	catch(const std::exception& e)
+	catch (std::exception &e)
 	{
-		std::cout<<"Exception catched"<<std::endl;
-		std::cerr << e.what() << '\n';
-	}
-	try
-	{
-		high_grade_brcrt.incGrade();
-	}
-	catch(const std::exception& e)
-	{
-		std::cout<<"Exception catched"<<std::endl;
-		std::cerr << e.what() << '\n';
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
 	
 	try
 	{
-		normal_brcrt.incGrade();
+		form = new PresidentialPardonForm("28A");
+		form->beSigned(Odin);
+		form->execute(Odin);
+		delete form;
+		form = NULL;
 	}
-	catch(const std::exception& e)
+	catch (std::exception &e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
-	
 	try
 	{
-		Form f4 = Form("F4", 0, 177);
+		form = new RobotomyRequestForm("28B");
+		Odin.signForm(*form);
+		std::cout << std::endl;
+		Thor.executeForm(*form);
+		Thor.executeForm(*form);
+		Thor.executeForm(*form);
+		Thor.executeForm(*form);
+		Thor.executeForm(*form);
+		Thor.executeForm(*form);
+		Thor.executeForm(*form);
+		delete form;
+		form = NULL;
 	}
-	catch(const std::exception& e)
+	catch (std::exception &e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
-	
 	try
 	{
-		std::cout<<"Nicole's sign form: "<<std::endl;
-		normal_brcrt.signForm(form1);
+		form = new ShrubberyCreationForm("28C");
+		Odin.signForm(*form);
+		Thor.executeForm(*form);
+		Loki.executeForm(*form);
+		delete form;
+		form = NULL;
 	}
-	catch(const std::exception& e)
+	catch (std::exception &e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
-	
-	try
-	{
-		std::cout<<"Nicole signed form2";
-		form2.beSigned(normal_brcrt);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	
+
 	return 0;
 }

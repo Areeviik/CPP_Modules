@@ -12,7 +12,16 @@ int main()
 	rrf = someRandomIntern.makeForm("Robotomy Request", "Bender");
 	try
 	{
-		rrf = someRandomIntern.makeForm("presidential pardon", "JOhnny");
+		rrf = someRandomIntern.makeForm("Presidential Pardon", "JOhnny");
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	try
+	{
+		rrf = someRandomIntern.makeForm("Hola, como estas?", "spanish");
 	}
 	catch(const std::exception& e)
 	{

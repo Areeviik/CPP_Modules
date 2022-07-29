@@ -2,13 +2,15 @@
 
 Bureaucrat::Bureaucrat(): name("no name"), grade(150){}
 
+Bureaucrat::~Bureaucrat(){}
+
 Bureaucrat::Bureaucrat(std::string name, int grade)
 {
 	this->name = name;
 	if (grade < 1)
-		Bureaucrat::GradeTooHighException();
+		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
-		Bureaucrat::GradeTooLowException();
+		throw Bureaucrat::GradeTooLowException();
 	else
 		this->grade = grade;
 }
@@ -40,18 +42,18 @@ std::string Bureaucrat::getName() const
 
 void Bureaucrat::incGrade()
 {
-	this->grade += 1;
+	this->grade -= 1;
 	if (grade < 1)
-		Bureaucrat::GradeTooHighException();
-	this->grade -= 1;	
+		throw Bureaucrat::GradeTooHighException();
+	// this->grade += 1;	
 }
 
 void Bureaucrat::decGrade()
 {
-	this->grade -= 1;
-	if (grade > 150)
-		Bureaucrat::GradeTooLowException();
 	this->grade += 1;
+	if (grade > 150)
+		throw Bureaucrat::GradeTooLowException();
+	// this->grade -= 1;
 }
 
 
