@@ -14,6 +14,7 @@ class Span
         Span();
         Span(unsigned int n);
         Span(const Span &cp);
+        ~Span();
         Span &operator= (const Span &oth);
         void addNumber(int num);
         int shortestSpan();
@@ -34,7 +35,7 @@ class Span
                     return ("Span is empty");
                 }
         };
-        void addManyNums(int *arr, int len);
+        void	addManyNums(std::vector<int>::const_iterator t1, std::vector<int>::const_iterator t2);
 };
 
 #endif

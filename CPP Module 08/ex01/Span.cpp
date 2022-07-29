@@ -31,20 +31,33 @@ void Span::addNumber(int num)
     this->arr.push_back(num);
 }
 
-void Span::addManyNums(int *arr, int len)
+void Span::addManyNums(std::vector<int>::const_iterator it1, std::vector<int>::const_iterator it2)
 {
-    for (int i = 0; i < len; i++)
-        this->addNumber(arr[i]);
+    while (it1 < it2)
+    {
+        this->N++;
+        if (size() > )
+    }
 }
 
 int Span::shortestSpan()
 {
     if (this->arr.size() == 0)
         throw Span::EmptySpan();
+    std::sort(arr.begin(), arr.end());
+    int min = arr[1] - arr[0];
+    for (int i = 2; i < N; i++)
+    {
+        if(arr[i] - arr[i - 1] < min)
+            min = arr[i] - arr[i - 1];
+    }
+    return min;
 }
 
 int Span::longestSpan()
 {
     if (this->arr.size() == 0)
         throw Span::EmptySpan();
+    std::sort(arr.begin(), arr.end());
+    return arr[N - 1] - arr[0];
 }

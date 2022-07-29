@@ -11,11 +11,14 @@ int main()
     std::cout <<"Shortest Span:" << sp.shortestSpan() << std::endl;
     std::cout << "Longest Span: " << sp.longestSpan() << std::endl;
 
-    int i = -1;
+    int i = 0;
     int len = 23000;
     int *arr;
-    while (++i < len)
+    while (i < len)
+    {
         arr[i] = rand();
+        i++;
+    }
     Span obj = Span(len);
     obj.addManyNums(arr, len);
     std::cout<<"Shortest Span: " << obj.shortestSpan() <<std::endl;
